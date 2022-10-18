@@ -1,14 +1,10 @@
 import mysql from "mysql";
 
-const connection = mysql.createConnection({
+const config = {
   host: "localhost",
   user: "root",
   password: "",
-  database: "basket",
-});
+  database: "basket"
+};
 
-let requete = "SELECT * FROM articles ";
-
-connection.query(requete, function (error, requete, fields) {
-  console.log(requete);
-});
+export const connection = mysql.createConnection(config);

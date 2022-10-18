@@ -1,8 +1,11 @@
 import express from "express";
-import HomeControler from "../controllers/Home.js";
+import ArticleController from "../controllers/Article.js";
+import HomeController from "../controllers/Home.js";
 
 const router = express.Router();
 
-router.get("/", HomeControler);
+router.get("/", HomeController);
+
+router.get("/article/:id", ArticleController)
 
 export default router;
