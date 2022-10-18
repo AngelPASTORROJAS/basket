@@ -6,6 +6,6 @@ const router = express.Router();
 
 router.get("/", HomeController);
 
-router.get("/article/:id", ArticleController)
+router.get("/article/:id", ArticleController);
 
 export default router;

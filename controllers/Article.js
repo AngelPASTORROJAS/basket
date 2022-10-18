@@ -5,10 +5,17 @@ export default (req, res) => {
 
   let queries = [
     "SELECT * FROM articles WHERE id = ?",
-    "SELECT * FROM commentaire WHERE articlesId = ? ;",
+    "SELECT * FROM commentaire WHERE articlesId = ? ;"
   ];
 
-  connection.query(queries.join(';'), [id,id], function (error, result, fields) {
-    res.render("article.ejs", { article: result[0][0], commentaires: result[1] });
-  });
+  connection.query(
+    queries.join(";"),
+    [id, id],
+    function (error, result, fields) {
+      res.render("article.ejs", {
+        article: result[0][0],
+        commentaires: result[1]
+      });
+    }
+  );
 };

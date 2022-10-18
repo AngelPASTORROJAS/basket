@@ -1,36 +1,32 @@
 <%- include('header') -%>
 
 <div class="article">
-    <div>
-        <h3 style="text-decoration: underline; text-align: center;">
-            <%= article.name %>
-        </h3>
-        <p>Description :
-            <%= article.description %>
-        </p>
-        <p>Date de sortie :
-            <%= article.date.getDate() %>/
-            <%= article.date.getMonth()+1 %>/
-            <%= article.date.getFullYear() %>
-        </p>
-        <br/>
-        <hr>
-        <% for (const commentaire of commentaires){ %>
-            <div class="commentaire">
-                <p>
-                    <strong style="color: cyan;">Pseudo : <%= commentaire.pseudo %> </strong>
-                </p>
-                <p>
-                    <strong>Commentaire : <%= commentaire.commentaire %> </strong>
-                </p>
-                <p>Date du commentaire : 
-                    <%= commentaire.date.getDate() %>/
-                    <%= commentaire.date.getMonth()+1 %>/
-                    <%= commentaire.date.getFullYear() %>
-                </p>
-            </div>
-        <% } %>  
+  <div>
+    <h3 style="text-decoration: underline; text-align: center">
+      <%= article.name %>
+    </h3>
+    <p>Description : <%= article.description %></p>
+    <p>
+      Date de sortie : <%= article.date.getDate() %>/ <%=
+      article.date.getMonth()+1 %>/ <%= article.date.getFullYear() %>
+    </p>
+    <br />
+    <hr />
+    <% for (const commentaire of commentaires){ %>
+    <div class="commentaire">
+      <p>
+        <strong style="color: cyan">Pseudo : <%= commentaire.pseudo %> </strong>
+      </p>
+      <p>
+        <strong>Commentaire : <%= commentaire.commentaire %> </strong>
+      </p>
+      <p>
+        Date du commentaire : <%= commentaire.date.getDate() %>/ <%=
+        commentaire.date.getMonth()+1 %>/ <%= commentaire.date.getFullYear() %>
+      </p>
     </div>
+    <% } %>
+  </div>
 </div>
 
 <%- include('footer') -%>
