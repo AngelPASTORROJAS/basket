@@ -9,9 +9,13 @@
     <div class="articles">
         <% for (const article of articles){ %>
             <div class="basket">
-                <strong style="text-decoration: underline; color: cyan;">Nom de la paire : <%= article.name %> </strong><br>
-                <p>Description : <%= article.description %> </p><br>
-                <p>Date de sortie : <%= article.date %> </p>
+                <strong style="text-decoration: underline; color: cyan;">Nom de la paire : <%= article.name %> </strong>
+                <p>Description : <%= article.description %> </p>
+                <p>Date de sortie : 
+                    <%= article.date.getDate() %>/
+                    <%= article.date.getMonth()+1 %>/
+                    <%= article.date.getFullYear() %>
+                </p>
             </div>
         <% } %>
     </div>
