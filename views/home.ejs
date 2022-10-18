@@ -6,6 +6,15 @@
     <p>
         Bienvenue sur mon blog, vous trouverez ici tous mes articles sur les Baskets !!! 
     </p>
+    <div class="articles">
+        <% for (const article of articles){ %>
+            <div class="basket">
+                <strong style="text-decoration: underline; color: cyan;">Nom de la paire : <%= article.name %> </strong><br>
+                <p>Description : <%= article.description %> </p><br>
+                <p>Date de sortie : <%= article.date %> </p>
+            </div>
+        <% } %>
+    </div>
 </div>
 
 <%- include('footer') -%>

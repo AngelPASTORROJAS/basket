@@ -1,10 +1,8 @@
-import express from 'express';
+import express from "express";
+import HomeControler from "../controllers/Home.js";
 
 const router = express.Router();
 
-
-router.get("/", (req, res) => {
-    res.render('home.ejs')
-})
+router.get("/", HomeControler);
 
 export default router;
