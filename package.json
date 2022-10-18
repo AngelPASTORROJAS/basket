@@ -1,0 +1,20 @@
+{
+  "name": "basket",
+  "version": "1.0.0",
+  "description": "- [Informations générales](#informations-générales)\r   - [Technologies](#technologies)\r   - [Installation](#installation)\r   - [Collaboration](#collaboration)\r   - [FAQs](#faqs)",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/AngelPASTORROJAS/basket.git"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/AngelPASTORROJAS/basket/issues"
+  },
+  "homepage": "https://github.com/AngelPASTORROJAS/basket#readme"
+}
