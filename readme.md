@@ -1,18 +1,18 @@
-## Table des matières :book:
+## Table des matières :notebook:
   - [Informations générales](#informations-générales)
   - [Technologies](#technologies)
   - [Installation](#installation)
   - [Collaboration](#collaboration)
   - [FAQs](#faqs)
 
-### Informations générales
+### Informations générales :newspaper:
 ***
-Blog de basket et snekears
+Ce projet est Blog de basket et snekears
 
-### Technologies
+### Technologies :telescope:
 ***
 
-### Installation
+### Installation :computer:
 ***
 ```shell
 $ git clone https://github.com/AngelPASTORROJAS/basket.git
@@ -22,4 +22,4 @@ $ npm install
 ### Collaboration
 ***
 
-### FAQs
+### FAQs :speech_balloon:
