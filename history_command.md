@@ -4,8 +4,8 @@
 npm init -y
 ```
 
-#### On installe express, fs, ejs, mysql, express-session
+#### On installe express, fs, ejs, mysql, express-session, bcrypt
 
 ```shell
-npm install express, fs, ejs, mysql, express-session
+npm install express, fs, ejs, mysql, express-session, bcrypt
 ```
