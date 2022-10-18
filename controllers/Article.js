@@ -2,24 +2,13 @@ import { connection } from "../bdd/app.js";
 
 export default (req, res) => {
   let id = req.params.id;
-  let requeteArticles = `SELECT * FROM articles WHERE id = ? `;
-//   let requeteCommentaire = `SELECT * FROM commentaire WHERE articlesId = ? `;
 
-//   let article;
-//   let commentaires;
+  let queries = [
+    "SELECT * FROM articles WHERE id = ?",
+    "SELECT * FROM commentaire WHERE articlesId = ? ;",
+  ];
 
-  connection.query(requeteArticles, [id], function (error, articles, fields) {
-    let article = articles[0];
-    res.render("article.ejs", { article: article });
+  connection.query(queries.join(';'), [id,id], function (error, result, fields) {
+    res.render("article.ejs", { article: result[0][0], commentaires: result[1] });
   });
-
-//   connection.query(
-//     requeteCommentaire,
-//     [id],
-//     function (error, commentairesOut, fields) {
-//       commentaires = commentairesOut;
-//       console.log(commentaires)
-//     }
-//   );
-
 };

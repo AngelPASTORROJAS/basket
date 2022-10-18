@@ -4,7 +4,8 @@ const config = {
   host: "localhost",
   user: "root",
   password: "",
-  database: "basket"
+  database: "basket",
+  multipleStatements: true
 };
 
 export const connection = mysql.createConnection(config);
