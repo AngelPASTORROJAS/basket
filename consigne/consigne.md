@@ -14,13 +14,13 @@ Articles, catégories et commentaires enregistrés en base de données.
 
 La liste des articles avec le titre, la date et les 100 premiers caractères du texte
 
-![](images/image1.png)
+![alt Page d'accueil](images/image1.png)
 
 > ##### PAGE ARTICLES :
 
 Lorsqu'on clique sur le titre d'un article de la page d'accueil, nous arrivons sur le détail de l'article avec les commentaires qui ont été postés et un formulaire pour ajouter un commentaire
 
-![](![](images/image2.png)
+![alt Page d'articles](images/image2.png)
 
 > ##### LE **BACK OFFICE** (NON SECURISE POUR LE MOMENT)
 
@@ -30,4 +30,4 @@ Il offrira la possibilité de :
 - Supprimer un article
 - Voir tous les articles
 
-![](![](images/image3.png)
+![alt Page du back office](images/image3.png)
