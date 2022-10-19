@@ -36,9 +36,7 @@ export const SubmitCommentaire = (req,res)=> {
   commentaire (pseudo, commentaire, date, articlesId)
   VALUES (?,?,?,?)`;
 
-  connection.query(queries, joinOnQueries, function (error, result, fields) {
-    console.log(error);
-    console.log(result);  
+  connection.query(queries, joinOnQueries, function (error, result, fields) { 
     res.redirect("/article/"+id.toString());
     }
   );
