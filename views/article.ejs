@@ -12,8 +12,7 @@
                 <%= article.description %></p>
             <p>Date de sortie :
                 <%= article.date.getDate() %>/<%= article.date.getMonth()+1 %>/<%= article.date.getFullYear() %></p>
-            <br/>
-            <hr/>
+            <br/><hr/>
         </td>
     </tr>
     <tr>
@@ -30,8 +29,29 @@
                 <p>Date du commentaire :
                     <%= commentaire.date.getDate() %>/<%=commentaire.date.getMonth()+1 %>/<%= commentaire.date.getFullYear() %></p>
             <% } %>
+            <br/><hr/>
         </td>
     </tr>
+    <form method="POST" action="">
+        <!-- <div style="margin: 700px; border: 1px solid #4CAF50;"> -->
+        <div>
+            <tr align="center">
+                    <td>
+                        Pseudo :
+                        <input type="text" name="pseudo">
+                    </td>
+                </tr>
+            </tr>
+            <tr align="center">
+                <td>
+                    Commentaire :
+                    <input type="text" name="commentaire">
+                </td>
+            </tr>
+            <tr align="center">
+                <td colspan="2"><input type="submit" value="Envoyer"></td>
+            </tr>
+        </div>
+    </form>
 </tbody>
-
 <%- include('footer') -%>

@@ -1,8 +1,8 @@
 import { connection } from "../bdd/app.js";
 
-export default (req, res) => {
+export const DisplayArticle = (req, res) => {
   let id = req.params.id;
-
+  let joinOnQueries = [id,id]; 
   let queries = [
     "SELECT * FROM articles WHERE id = ?",
     "SELECT * FROM commentaire WHERE articlesId = ? ;"
@@ -10,7 +10,7 @@ export default (req, res) => {
 
   connection.query(
     queries.join(";"),
-    [id, id],
+    joinOnQueries,
     function (error, result, fields) {
       res.render("article.ejs", {
         article: result[0][0],
@@ -19,3 +19,31 @@ export default (req, res) => {
     }
   );
 };
+
+export const SubmitCommentaire = (req,res)=> {
+  let id = req.params.id;
+  let commentaireToInsert = req.body;
+  
+  let dateNew = new Date(); 
+  let dateNow = [
+    dateNew.getFullYear().toString(),
+    (dateNew.getMonth()+1).toString(),
+    dateNew.getDate().toString()
+  ].join('-')
+  
+  let joinOnQueries = [commentaireToInsert.pseudo,commentaireToInsert.commentaire,dateNow,id]
+  let queries = `INSERT INTO 
+  commentaire (pseudo, commentaire, date, articlesId)
+  VALUES (?,?,?,?)`;
+
+  connection.query(queries, joinOnQueries, function (error, result, fields) {
+    console.log(error);
+    console.log(result);  
+    res.redirect("/article/"+id.toString());
+    }
+  );
+}
+
+
+
+
