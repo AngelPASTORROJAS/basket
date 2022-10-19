@@ -1,30 +1,38 @@
 <%- include('header') -%>
 
-<div>
-  <!-- ajout code point &#x..codepoint.. -->
-  <h3 style="text-align: center; text-decoration: underline">Home</h3>
-  <p>
-    Bienvenue sur mon blog, vous trouverez ici tous mes articles sur les Baskets
-    !!!
-  </p>
-  <div class="articles">
-    <% for (const article of articles){ %>
-    <div class="basket">
-      <a href="/article/<%= article.id %> ">
-        <strong style="text-decoration: underline; color: cyan"
-          >Nom de la paire : <%= article.name %>
-        </strong>
-      </a>
-      <p style="white-space: pre-line">Description : <%= article.description %></p>
-      <p>
-        Date de sortie : 
-        <%= article.date.getDate() %>/ 
-        <%= article.date.getMonth()+1 %>/ 
-        <%= article.date.getFullYear() %>
-      </p>
-    </div>
-    <% } %>
-  </div>
-</div>
+<tbody>
+    <tr>
+        <td>
+            <!-- ajout code point &#x..codepoint.. -->
+            <h3 style="text-align: center; text-decoration: underline">Home</h3>
+            <p>
+                Bienvenue sur mon blog, vous trouverez ici tous mes articles sur les Baskets
+                                      !!!
+            </p>
+            <div class="articles">
+                <% for (const article of articles){ %>
+                    <div class="basket">
+                        <a href="/article/<%= article.id %> ">
+                            <strong style="color: cyan">
+                                <ins>
+                                    Nom de la paire :
+                                    <%= article.name %>
+                                </ins>
+                            </strong>
+                        </a>
+                        <p style="white-space: pre-line">Description :
+                            <%= article.description %></p>
+                        <p>
+                            Date de sortie :
+                            <%= article.date.getDate() %>/
+                            <%= article.date.getMonth()+1 %>/
+                            <%= article.date.getFullYear() %>
+                        </p>
+                    </div>
+                <% } %>
+            </div>
+        </td>
+    </tr>
+</tbody>
 
 <%- include('footer') -%>
